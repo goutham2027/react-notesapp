@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 /*
  *import App from './App';
  */
+import CreateNotes from './CreateNotes';
 import NotesList from './NotesList';
 import './index.css';
 
@@ -10,6 +11,9 @@ ReactDOM.render(
   /*
    *<App />,
    */
-  <NotesList />,
+  <div>
+  <CreateNotes />
+  <NotesList />
+  </div>,
   document.getElementById('root')
 );

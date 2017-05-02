@@ -29,6 +29,12 @@ class NotesList extends Component {
    });
  }
 
+ starFoulWords() {
+   /* TODO: mark star foul words
+    *
+    */
+ }
+
   render() {
     const notes = this.state.notes;
     return (
