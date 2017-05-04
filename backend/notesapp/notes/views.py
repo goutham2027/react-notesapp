@@ -23,3 +23,11 @@ def notes_list(request):
             serializer.save()
             return JsonResponse(serializer.data, status=201)
         return JsonResponse(serializer.errors, status=400)
+
+
+@csrf_exempt
+def notes_detail(request, notes_id):
+    if request.method == 'GET':
+        notes = Note.objects.filter(id=notes_id).first()
+        serializer = NoteSerializer(notes)
+        return JsonResponse(serializer.data, safe=False)
